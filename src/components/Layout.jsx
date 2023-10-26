@@ -1,16 +1,17 @@
-import { Panel, PanelGroup } from "react-resizable-panels"
+import { Panel, PanelGroup } from "react-resizable-panels";
 
-import QueryEditor from "./QueryEditor"
-import ResizeHandle from "./ResizeHandleUI"
-import ResultTable from "./ResultTable"
-import Sidebar from "./Sidebar"
+import QueryEditor from "./QueryEditor";
+import ResizeHandle from "./ResizeHandleUI";
+import ResultTable from "./ResultTable";
+import Sidebar from "./Sidebar";
 
 const Layout = () => {
   return (
     <PanelGroup
       className="w-full h-full"
       direction="horizontal"
-      autoSaveId="hor-panel">
+      autoSaveId="hor-panel"
+    >
       <Panel className="hidden md:flex" defaultSize={20}>
         <Sidebar />
       </Panel>
@@ -19,7 +20,8 @@ const Layout = () => {
         <PanelGroup
           className="h-full w-full"
           direction="vertical"
-          autoSaveId="ver-panel">
+          autoSaveId="ver-panel"
+        >
           <Panel defaultSize={35}>
             <QueryEditor />
           </Panel>
@@ -30,7 +32,7 @@ const Layout = () => {
         </PanelGroup>
       </Panel>
     </PanelGroup>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

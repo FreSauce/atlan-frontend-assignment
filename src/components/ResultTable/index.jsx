@@ -11,15 +11,15 @@ const ResultTable = () => {
         <Spinner />
       ) : error ? (
         <QueryError errorMessage={error} />
-      ) :
-        result ? <Table result={result} />
-          : (
-            <div className="flex items-center justify-center h-full">
-              <div className="text-gray-400 flex">
-                Execute the query to see the result here
-              </div>
-            </div>
-          )}
+      ) : result ? (
+        <Table result={result} />
+      ) : (
+        <div className="flex items-center justify-center h-full">
+          <div className="text-gray-400 flex">
+            Execute the query to see the result here
+          </div>
+        </div>
+      )}
     </div>
   );
 };

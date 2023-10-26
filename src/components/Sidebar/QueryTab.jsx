@@ -1,11 +1,12 @@
-import { useQueryContext } from "../../context/QueryContext"
+import { useQueryContext } from "../../context/QueryContext";
 
 const QueryTab = ({ query }) => {
-  const { loadQuery } = useQueryContext()
+  const { loadQuery } = useQueryContext();
   return (
     <li
       className="py-3 select-none cursor-pointer"
-      onClick={() => loadQuery(query)}>
+      onClick={() => loadQuery(query)}
+    >
       <div className="flex items-center space-x-4">
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
@@ -26,7 +27,7 @@ const QueryTab = ({ query }) => {
         </div>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default QueryTab
+export default QueryTab;

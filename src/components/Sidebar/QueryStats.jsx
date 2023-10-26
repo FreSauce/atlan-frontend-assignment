@@ -1,9 +1,9 @@
-import { useEditorContext } from "../../context/EditorContext"
-import { useQueryContext } from "../../context/QueryContext"
+import { useEditorContext } from "../../context/EditorContext";
+import { useQueryContext } from "../../context/QueryContext";
 
 const QueryStats = () => {
-  const { stats, result, loading, error } = useQueryContext()
-  const { activeTab } = useEditorContext()
+  const { stats, result, loading, error } = useQueryContext();
+  const { activeTab } = useEditorContext();
   return (
     <div className="w-full h-full flex flex-col p-4 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
       <div className="flex items-center justify-between mb-4">
@@ -17,7 +17,15 @@ const QueryStats = () => {
             Status
           </p>
           <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-            {loading ? "Loading" : error ? "Failed" : result ? "Succeded" : activeTab ? "Not Executed" : "N/A"}
+            {loading
+              ? "Loading"
+              : error
+              ? "Failed"
+              : result
+              ? "Succeded"
+              : activeTab
+              ? "Not Executed"
+              : "N/A"}
           </p>
         </div>
         <div className="flex-1 min-w-0">
@@ -46,7 +54,7 @@ const QueryStats = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default QueryStats
+export default QueryStats;

@@ -1,16 +1,17 @@
-import { Panel, PanelGroup } from "react-resizable-panels"
+import { Panel, PanelGroup } from "react-resizable-panels";
 
-import ResizeHandle from "../ResizeHandleUI"
-import RecentQueries from "./RecentQueries"
-import SavedQueries from "./SavedQueries"
-import QueryStats from "./QueryStats"
+import ResizeHandle from "../ResizeHandleUI";
+import RecentQueries from "./RecentQueries";
+import SavedQueries from "./SavedQueries";
+import QueryStats from "./QueryStats";
 
 const Sidebar = () => {
   return (
     <PanelGroup
       className="h-full w-full"
       autoSaveId="sidebar-panel"
-      direction="vertical">
+      direction="vertical"
+    >
       <Panel>
         <RecentQueries />
       </Panel>
@@ -23,7 +24,7 @@ const Sidebar = () => {
         <QueryStats />
       </Panel>
     </PanelGroup>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

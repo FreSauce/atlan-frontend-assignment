@@ -1,8 +1,8 @@
-import { useQueryContext } from "../../context/QueryContext"
-import QueryTab from "./QueryTab"
+import { useQueryContext } from "../../context/QueryContext";
+import QueryTab from "./QueryTab";
 
 const SavedQueries = () => {
-  const { savedQueries } = useQueryContext()
+  const { savedQueries } = useQueryContext();
 
   return (
     <div className="w-full h-full flex flex-col p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
@@ -11,14 +11,13 @@ const SavedQueries = () => {
           Saved Queries
         </h5>
       </div>
-      <ul
-        className="divide-y divide-gray-200 dark:divide-gray-700 overflow-y-auto flex flex-col px-2">
+      <ul className="divide-y divide-gray-200 dark:divide-gray-700 overflow-y-auto flex flex-col px-2">
         {savedQueries.map((query, index) => {
-          return <QueryTab key={index} query={query} />
+          return <QueryTab key={index} query={query} />;
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default SavedQueries
+export default SavedQueries;

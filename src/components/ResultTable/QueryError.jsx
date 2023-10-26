@@ -1,4 +1,4 @@
-import { XCircleIcon } from "@heroicons/react/24/solid"
+import { XCircleIcon } from "@heroicons/react/24/solid";
 
 const QueryError = ({ errorMessage }) => {
   return (
@@ -15,7 +15,7 @@ const QueryError = ({ errorMessage }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default QueryError
+export default QueryError;

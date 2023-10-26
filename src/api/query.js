@@ -4,7 +4,6 @@ export const runQuery = async (query, delay = 1000) => {
   //mock query response
   await sleep(delay);
   for (let key of Object.keys(mockData)) {
-    console.log(key, query);
     if (query.includes(key)) {
       return {
         result: mockData[key],

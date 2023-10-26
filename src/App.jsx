@@ -1,6 +1,6 @@
-import Layout from "./components/Layout"
-import EditorContextProvider from "./context/EditorContext"
-import QueryContextProvider from "./context/QueryContext"
+import Layout from "./components/Layout";
+import EditorContextProvider from "./context/EditorContext";
+import QueryContextProvider from "./context/QueryContext";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         </div>
       </QueryContextProvider>
     </EditorContextProvider>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,11 +1,11 @@
-import { useEditorContext } from "../../context/EditorContext"
-import { useQueryContext } from "../../context/QueryContext"
-import Button from "./Button"
-import Tab from "./Tab.jsx"
+import { useEditorContext } from "../../context/EditorContext";
+import { useQueryContext } from "../../context/QueryContext";
+import Button from "./Button";
+import Tab from "./Tab.jsx";
 
 const EditorNavbar = () => {
-  const { tabs, activeTab } = useEditorContext()
-  const { executeQuery, saveQuery } = useQueryContext()
+  const { tabs, activeTab } = useEditorContext();
+  const { executeQuery, saveQuery } = useQueryContext();
   return (
     <div className="flex text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
       <div className="flex flex-nowrap -mb-px overflow-y-auto">
@@ -32,7 +32,7 @@ const EditorNavbar = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EditorNavbar
+export default EditorNavbar;

@@ -1,12 +1,12 @@
-import { PlusSmallIcon } from "@heroicons/react/24/solid"
-import { Editor } from "@monaco-editor/react"
+import { PlusSmallIcon } from "@heroicons/react/24/solid";
+import { Editor } from "@monaco-editor/react";
 
-import { useEditorContext } from "../../context/EditorContext"
-import Spinner from "../Spinner"
-import EditorNavbar from "./EditorNavbar"
+import { useEditorContext } from "../../context/EditorContext";
+import Spinner from "../Spinner";
+import EditorNavbar from "./EditorNavbar";
 
 const QueryEditor = () => {
-  const { activeTab, tabsData, updateTab } = useEditorContext()
+  const { activeTab, tabsData, updateTab } = useEditorContext();
   return (
     <div className="h-full w-full bg-gray-800 overflow-hidden flex flex-col border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <EditorNavbar />
@@ -19,7 +19,7 @@ const QueryEditor = () => {
             defaultLanguage="sql"
             theme="vs-dark"
             options={{
-              minimap: { enabled: false }
+              minimap: { enabled: false },
             }}
             onChange={(value) => updateTab(activeTab, { value: value })}
             loading={<Spinner />}
@@ -36,7 +36,7 @@ const QueryEditor = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default QueryEditor
+export default QueryEditor;
