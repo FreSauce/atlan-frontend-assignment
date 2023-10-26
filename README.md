@@ -11,6 +11,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     -  Virtualized rows to allow loading large amount of rows without lagging.
     -  Allows resizing the columns to view the cell data easily.
     -  Allows sorting by any table field to understand the structure of the data
+    ![table](https://github.com/FreSauce/atlan-frontend-assignment/assets/34598383/2a179607-3cc3-4570-85c5-cac462409f64)
+
 - Recent Queries
     - Allows users to see the history of queries executed along with their results cached to avoid calling the API again. 
 - Saved Queries
@@ -21,10 +23,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     -  Rows affected
 - Allows resizing all the panels as per the user's preference.
     ![adjustable](https://github.com/FreSauce/atlan-frontend-assignment/assets/34598383/9c838cda-1d32-4ad7-b124-cb9b086471d8)
- 
 - Light and Dark Mode.
-- Responsive website for all screens.
-- Error handling
+   ![image](https://github.com/FreSauce/atlan-frontend-assignment/assets/34598383/44a64b30-aeb5-4755-8f47-6f62cdfbd580)
+- Responsive website for all screens \
+  ![image](https://github.com/FreSauce/atlan-frontend-assignment/assets/34598383/419a75bc-41ce-4841-b718-345f4d687b17)
+- Error handling \
+   ![image](https://github.com/FreSauce/atlan-frontend-assignment/assets/34598383/9adf154e-909b-43ca-98fe-9b183cca8327)
+
 
 ### Tech stack:
 
@@ -36,8 +41,8 @@ External dependencies used:
 -  `react-table`: To work with result table and add features like sorting, resizing etc.
 -  `react-virtual`: To generate virtualized rows for rendering large amounts of rows.
 -  `react-resizable-panels`: To make resizable layout for all components.
-### Available Scripts
 
+### Available Scripts
 In the project directory, you can run:
 
 `npm install`
@@ -50,6 +55,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 `npm run build`
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+## Optimizations
+
+For optimization, used react-virtual for keeping the DOM elements finite and fast for large number of rows.
+All the assets are optimized by Netlify CDN, giving faster page load speed.
+
+Lighthouse report for the deployed website:
+![image](https://github.com/FreSauce/atlan-frontend-assignment/assets/34598383/b3bfcd92-e536-4030-b08a-a03f5dba9eeb)
+
 
 ## Deployment
 
