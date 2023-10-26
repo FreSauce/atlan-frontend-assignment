@@ -2,7 +2,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import Layout from "./components/Layout";
 import EditorContextProvider from "./context/EditorContext";
 import QueryContextProvider from "./context/QueryContext";
-import ThemeContextProvider, { useThemeContext } from "./context/ThemeContext";
+import { useThemeContext } from "./context/ThemeContext";
 
 function App() {
   const { isDarkTheme, toggleTheme } = useThemeContext();
