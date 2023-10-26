@@ -10,9 +10,9 @@ const ResizeHandle = ({ direction, className }) => {
       className={`flex items-center justify-center text-center ${className}`}
     >
       {direction === "vertical" ? (
-        <EllipsisHorizontalIcon className="text-white h-5 w-5" />
+        <EllipsisHorizontalIcon className="text-gray-600 dark:text-white h-5 w-5" />
       ) : (
-        <EllipsisVerticalIcon className="text-white  h-5 w-5" />
+        <EllipsisVerticalIcon className="text-gray-600 dark:text-white  h-5 w-5" />
       )}
     </PanelResizeHandle>
   );

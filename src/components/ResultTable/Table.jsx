@@ -71,13 +71,13 @@ const Table = ({ result }) => {
           width: table.getCenterTotalSize(),
         }}
       >
-        <thead className="text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-300 sticky top-0">
+        <thead className="text-gray-700 bg-gray-200 dark:bg-gray-700 dark:text-gray-300 sticky top-0">
           {table.getHeaderGroups().map((headerGroup) => (
             <tr className="group" key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
                 <th
                   scope="col"
-                  className="relative px-4 py-3 select-none "
+                  className="relative px-4 py-3 select-none"
                   key={header.id}
                   colSpan={header.colSpan}
                   style={{
@@ -92,27 +92,28 @@ const Table = ({ result }) => {
                         }`}
                       onClick={header.column.getToggleSortingHandler()}
                     >
-                      <div className="flex  items-center">
+                      <div className="flex items-center text-gray-800 dark:text-gray-300">
                         {flexRender(
                           header.column.columnDef.header,
                           header.getContext(),
                         )}
                       </div>
                       {header.column.getIsSorted() === "asc" ? (
-                        <ArrowSmallDownIcon className="ml-2 h-4 w-4 text-gray-50" />
+                        <ArrowSmallDownIcon className="ml-2 h-4 w-4 " />
                       ) : header.column.getIsSorted() === "desc" ? (
-                        <ArrowSmallUpIcon className="ml-2 h-4 w-4 text-gray-50" />
+                        <ArrowSmallUpIcon className="ml-2 h-4 w-4 " />
                       ) : (
-                        <ArrowsUpDownIcon className="ml-2 h-4 w-4 text-gray-50" />
+                        <ArrowsUpDownIcon className="ml-2 h-4 w-4 " />
                       )}
                       {header.column.getCanResize() && (
                         <div
                           onClick={(e) => e.stopPropagation()}
                           onMouseDown={header.getResizeHandler()}
                           onTouchStart={header.getResizeHandler()}
-                          className={`absolute top-0 right-0 h-full w-1 bg-gray-400 opacity-0 group-hover:opacity-100 cursor-col-resize select-none ${header.column.getIsResizing()
-                            ? "bg-blue-400 opacity-100"
-                            : ""
+                          className={`absolute top-0 right-0 h-full w-[2px] bg-gray-600 dark:bg-gray-400 opacity-0 group-hover:opacity-60 cursor-col-resize select-none 
+                          ${header.column.getIsResizing()
+                              ? "bg-blue-400 opacity-100"
+                              : ""
                             }`}
                         />
                       )}
@@ -134,11 +135,11 @@ const Table = ({ result }) => {
             return (
               <tr
                 key={row.id}
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                className="bg-white border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700"
               >
                 {row.getVisibleCells().map((cell) => (
                   <td
-                    className="p-2 border-x dark:border-gray-700 break-all"
+                    className="p-2 border-x border-gray-300 dark:border-gray-700 break-all text-gray-800 dark:text-gray-300"
                     key={cell.id}
                     style={{
                       width: cell.column.getSize(),

@@ -4,11 +4,13 @@ import { Editor } from "@monaco-editor/react";
 import { useEditorContext } from "../../context/EditorContext";
 import Spinner from "../Spinner";
 import EditorNavbar from "./EditorNavbar";
+import { useThemeContext } from "../../context/ThemeContext";
 
 const QueryEditor = () => {
   const { activeTab, tabsData, updateTab } = useEditorContext();
+  const { isDarkTheme } = useThemeContext()
   return (
-    <div className="h-full w-full bg-gray-800 overflow-hidden flex flex-col border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="h-full w-full bg-gray-50 overflow-hidden flex flex-col border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <EditorNavbar />
       <div className="flex-grow">
         {activeTab !== null ? (
@@ -17,7 +19,7 @@ const QueryEditor = () => {
             language={tabsData[activeTab].language}
             value={tabsData[activeTab].value}
             defaultLanguage="sql"
-            theme="vs-dark"
+            theme={isDarkTheme ? "vs-dark" : "light"}
             options={{
               minimap: { enabled: false },
             }}
@@ -26,7 +28,7 @@ const QueryEditor = () => {
           />
         ) : (
           <div className="flex items-center justify-center h-full">
-            <div className="text-gray-400 flex">
+            <div className="text-gray-800 dark:text-gray-400 flex">
               Create a new Tab using{" "}
               <span>
                 <PlusSmallIcon className="ml-2 h-6 w-6" />

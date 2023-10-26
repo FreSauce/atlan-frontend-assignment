@@ -5,7 +5,7 @@ const QueryStats = () => {
   const { stats, result, loading, error } = useQueryContext();
   const { activeTab } = useEditorContext();
   return (
-    <div className="w-full h-full flex flex-col p-4 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+    <div className="w-full h-full flex flex-col p-4 border bg-gray-50 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
       <div className="flex items-center justify-between mb-4">
         <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
           Query Stats
@@ -20,12 +20,12 @@ const QueryStats = () => {
             {loading
               ? "Loading"
               : error
-              ? "Failed"
-              : result
-              ? "Succeded"
-              : activeTab
-              ? "Not Executed"
-              : "N/A"}
+                ? "Failed"
+                : result
+                  ? "Succeded"
+                  : activeTab
+                    ? "Not Executed"
+                    : "N/A"}
           </p>
         </div>
         <div className="flex-1 min-w-0">
