@@ -37,6 +37,7 @@ export const generateSavedQueries = () => {
       },
     });
   }
+  savedQueries.reverse();
   return savedQueries;
 };
 
